@@ -1,0 +1,661 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAGEAH Ingénierie | Hydraulique & Environnement - Expert en Cours d'Eau</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/Notre_histoire.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+
+    <meta name="description" content="SAGEAH Ingénierie - Spécialiste en diagnostic des cours d'eau, modélisation hydraulique, gestion écologique des eaux pluviales et aménagements hydrauliques.">
+    <meta name="keywords" content="diagnostic cours d'eau, milieux aquatiques, hydrologie, hydromorphologie, maitrise d'oeuvre en écologie des rivières, modélisation hydraulique en 1D et 2D, , eaux pluviales, aménagements hydrauliques, restauration rivières, HEC-RAS, étude d'impact environnemental, assainissement, dossier loi sur l'eau, France, ingénierie environnementale, SAGEAH, Sageah Ingénierie">
+    <meta name="author" content="SAGEAH Ingénierie">
+    <meta name="geo.region" content="FR">
+    <meta name="geo.placename" content="Limay, Île-de-France, Eure, Normandie, Grand EST, Centre Val de LOire, Haut de France, France">
+    <meta name="geo.position" content="48.9980;1.7428"> 
+    <meta property="og:title" content="SAGEAH Ingénierie - Expert en Hydraulique et Environnement">
+    <meta property="og:description" content="Diagnostic des milieux aquatiques, gestion des eaux pluviales et modélisation hydraulique 1D/2D sur HEC-RAS.">
+    <meta property="og:image" content="https://www.sageah.com/images/hero-image.jpg"> 
+    <meta property="og:site_name" content="SAGEAH Ingénierie">
+    <meta property="og:url" content="https://www.sageah.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SAGEAH Ingénierie - Hydraulique & Environnement">
+    <meta name="twitter:description" content="Spécialiste en diagnostic des milieux aquatiques et aménagements hydrauliques en France.">
+    <meta name="twitter:image" content="https://www.sageah.com/images/Sageah.jpg">
+    <link rel="canonical" href="https://www.sageah.com">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta http-equiv="Content-Language" content="fr">
+    <meta name="language" content="French">
+    <meta property="og:site_name" content="SAGEAH Ingénierie">
+    <style>
+        /* Base styles */
+        body {
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Responsive Typography */
+        h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+        }
+        
+        h2 {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+        }
+        
+        p {
+            font-size: clamp(0.9rem, 3vw, 1rem);
+        }
+        
+        /* Slideshow Container */
+        .mySlides {
+            display: none;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 500px;
+        }
+        
+        /* Navigation buttons */
+        .w3-button {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: clamp(8px, 3vw, 16px);
+            margin-top: -60px;
+            color: white;
+            font-weight: bold;
+            font-size: clamp(14px, 3vw, 18px);
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            user-select: none;
+            -webkit-user-select: none;
+            z-index: 10;
+        }
+        
+        .w3-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .w3-display-left {
+            left: 0;
+        }
+        
+        .w3-display-right {
+            right: 0;
+        }
+        
+        /* Text overlay */
+        .w3-display-middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 90%;
+            max-width: 600px;
+        }
+        
+        .w3-display-middle h1 {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: clamp(5px, 2vw, 10px);
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .en-savoir-plus {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: clamp(14px, 3vw, 20px);
+            padding: clamp(5px, 2vw, 10px);
+            border-radius: 10px;
+            text-align: center;
+            width: clamp(150px, 40%, 200px);
+            margin: 10px auto;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .en-savoir-plus:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        /* Tiles section */
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .tiles article {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .tiles article:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tiles .image {
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 66.67%; /* 2:3 aspect ratio */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tiles .image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .tiles article a {
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .tiles article h2 {
+            padding: 15px;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .tiles article .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        
+        .tiles article:hover .content {
+            opacity: 1;
+        }
+        
+        /* Section titles */
+        .section-title {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        
+        .title-icon {
+            margin-right: 10px;
+        }
+        
+        /* Header and Menu */
+        #header {
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        #header .inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .logo .symbol img {
+            height: clamp(30px, 10vw, 60px);
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .logo .title {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: bold;
+        }
+        
+        /* Menu styling */
+        #menu {
+            position: fixed;
+            right: -300px;
+            top: 0;
+            width: 300px;
+            max-width: 80vw;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            transition: right 0.3s;
+            z-index: 100;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        #menu.active {
+            right: 0;
+        }
+        
+        #menu h2 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #menu ul li {
+            margin: 10px 0;
+        }
+        
+        #menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        #menu ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        
+        /* Footer */
+        #footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        
+        #footer .inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        #footer .left-section, 
+        #footer .center-section, 
+        #footer .right-section {
+            flex: 1 1 300px;
+        }
+        
+        #footer .center-section {
+            text-align: center;
+        }
+        
+        #footer .right-section {
+            text-align: right;
+        }
+        
+        #footer .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        #footer .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+        
+        #footer .copyright p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .tiles {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            #footer .inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            #footer .right-section {
+                text-align: center;
+            }
+            
+            #footer .social-icons a {
+                margin: 0 10px;
+            }
+            
+            .w3-display-middle h1 {
+                font-size: 1.5rem;
+            }
+            
+            .en-savoir-plus {
+                font-size: 16px;
+            }
+            
+            .w3-button {
+                padding: 10px;
+                margin-top: -40px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .tiles {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            
+            .w3-display-middle h1 {
+                font-size: 1.2rem;
+                padding: 5px;
+            }
+            
+            .en-savoir-plus {
+                font-size: 14px;
+                padding: 5px;
+            }
+            
+            .section-title {
+                padding: 10px;
+                margin: 10px 0;
+            }
+            
+            .w3-button {
+                padding: 6px;
+                font-size: 14px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .w3-animate-top {
+            animation: fadeIn 1s;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="symbol"><img src="images/sageah.png" alt="Sages ingénierie logo"></span>
+                    <span class="title">Sageah ingénierie</span>
+                </a>
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#" id="menu-toggle">Menu</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Sageah_ingenierie.html">Notre société</a></li>
+                <li><a href="Vos_enjeux.html">Vos enjeux</a></li>
+                <li><a href="Nos_expertises.html">Nos expertises</a></li>
+                <li><a href="Nos_materiels.html">Nos matériels</a></li>
+                <li><a href="elements.html">Nous contacter</a></li>
+            </ul>
+        </nav>
+
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <div class="mySlides w3-animate-top" style="position: relative;">
+                <img src="images/Diagnostic.jpg" alt="Diagnostic rivières et systèmes de drainage">
+                <div class="w3-display-middle">
+                    <h1>Diagnostic des rivières et systèmes de drainage</h1>
+                    <a href="Nos_materiels.html" class="en-savoir-plus">Découvrir nos matériels</a>
+                </div>
+            </div>
+            <div class="mySlides w3-animate-top" style="position: relative;">
+                <img src="images/gestion_ecologique_des_eaux_pluvales.jpg" alt="Gestion écologique des eaux pluviales">
+                <div class="w3-display-middle">
+                    <h1>Gestion écologique des eaux pluviales</h1>
+                    <a href="Nos_materiels.html" class="en-savoir-plus">Découvrir nos matériels</a>
+                </div>
+            </div>
+            <div class="mySlides w3-animate-top" style="position: relative;">
+                <img src="images/modelisation_hydraulique.jpg" alt="Modélisation hydraulique">
+                <div class="w3-display-middle">
+                    <h1>Modélisation hydraulique</h1>
+                    <a href="Nos_materiels.html" class="en-savoir-plus">Découvrir nos matériels</a>
+                </div>
+            </div>
+            <div class="mySlides w3-animate-top" style="position: relative;">
+                <img src="images/Renaturation_eau.jpg" alt="Restauration des cours d'eau">
+                <div class="w3-display-middle">
+                    <h1>Restauration des cours d'eau</h1>
+                    <a href="Nos_materiels.html" class="en-savoir-plus">Découvrir nos matériels</a>
+                </div>
+            </div>
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+
+        <!-- Main Content -->
+        <header> 
+            <h2 class="section-title"><span class="title-icon">🌟</span> Nos prestations et activités</h2>
+        </header>
+          
+        <section class="tiles">
+            <article class="style3">
+                <span class="image">
+                    <img src="images/Diagnostic.jpg" alt="Bassin">
+                </span>
+                <a href="diagnostic.html">
+                    <h2>Diagnostic des systèmes de drainage et rivières</h2>
+                    <div class="content">
+                        <p>SAGEAH Ingénierie vous accompagne dans l'analyse et l'optimisation de vos systèmes de drainage et cours d'eau. 
+                            Nos diagnostics précis évaluent l'efficacité, la durabilité et la conformité de vos infrastructures, pour prévenir les risques d'inondation, améliorer l'écoulement des eaux ou restaurer les écosystèmes aquatiques. Des solutions sur mesure pour une gestion durable de l'eau.</p>
+                    </div>
+                </a>
+            </article>
+            <article class="style2">
+                <span class="image">
+                    <img src="images/modelisation_1_hydraulique.jpg" alt="Modélisation hydraulique">
+                </span>
+                <a href="modelisation.html">
+                    <h2>Modélisation hydraulique</h2>
+                    <div class="content">
+                        <p>SAGEAH Ingénierie utilise HEC RAS 1D, 2D en modélisation hydraulique pour simuler et anticiper le comportement des cours d'eau et des systèmes de drainage. Cette approche permet d'analyser les flux, d'identifier les risques d'inondation et d'optimiser les aménagements hydrauliques. Grâce à des modèles précis et personnalisés, nous vous accompagnons dans la conception de solutions efficaces et durables, adaptées à vos besoins spécifiques.
+                            Une expertise technique pour des projets hydrauliques maîtrisés.</p>
+                    </div>
+                </a>
+            </article>
+            <article class="style3">
+                <span class="image">
+                    <img src="images/gestion_ ecologique_EP.jpg" alt="Gestion des eaux pluviales">
+                </span>
+                <a href="Gestion_EP.html">
+                    <h2>Gestion écologique des eaux pluviales</h2>
+                    <div class="content">
+                        <p>SAGEAH Ingénierie propose des solutions innovantes et respectueuses de l'environnement pour la gestion des eaux pluviales. Nous concevons des systèmes durables intégrant des techniques alternatives (végétalisation, infiltration, récupération) pour limiter les rejets, préserver les ressources en eau et réduire les impacts sur les milieux naturels. Notre approche vise à concilier performance technique et préservation des écosystèmes.
+                            Des solutions écologiques pour une gestion responsable des eaux pluviales.</p>
+                    </div>
+                </a>
+            </article>
+            <article class="style4">
+                <span class="image">
+                    <img src="images/Loi_eau.png" alt="Loi sur l'eau">
+                </span>
+                <a href="loi_sur_eau.html">
+                    <h2>Rédaction de dossier réglémentaire</h2>
+                    <div class="content">
+                        <p>SAGEAH Ingénierie vous accompagne dans la préparation et la rédaction de vos dossiers réglementaires liés à l'eau et à l'environnement. Que ce soit pour une déclaration, une autorisation ou une étude d'impact, notre équipe garantit des documents conformes aux normes en vigueur, précis et adaptés à vos projets. Gagnez en sérénité et en efficacité en confiant la gestion administrative à nos experts.
+                            Une expertise au service de la conformité et de la réussite de vos projets.</p>
+                    </div>
+                </a>
+            </article>
+            <article class="style5">
+                <span class="image">
+                    <img src="images/renaturation_ deau.jpg" alt="Rénaturation cours d'eau">
+                </span>
+                <a href="restauration.html">
+                    <h2>Renaturation des cours d'eau</h2>
+                    <div class="content">
+                        <p>Grâce à son expertise dans ce domaine, SAGEAH Ingénierie aide les collectivités locales à redonner vie aux rivières qui ont été altérées par des activités humaines.</p>
+                    </div>
+                </a>
+            </article>
+            <article class="style6">
+                <span class="image">
+                    <img src="images/Traitement_eau.jpg" alt="Traitement de l'eau">
+                </span>
+                <a href="assainissement.html">
+                    <h2>Assainissement et VRD</h2>
+                    <div class="content">
+                        <p>SAGEAH Ingénierie vous accompagne dans la conception, la réalisation et l'optimisation de vos projets d'assainissement et de Voirie-Réseaux-Divers (VRD). Que ce soit pour la gestion des eaux usées, pluviales ou la mise en place d'infrastructures techniques, nous proposons des solutions sur mesure, respectueuses des normes et adaptées à vos besoins. Notre expertise garantit des aménagements durables, fonctionnels et intégrés à leur environnement.
+                            Des solutions techniques pour des infrastructures performantes et pérennes.</p>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="left-section">
+                <div class="logo">
+                    <img src="images/sageah.png" alt="Sageah ingénierie" />
+                </div>
+            </div>
+            <div class="center-section">
+                <div class="copyright">
+                    <p>Email : contact.sageah@gmail.com | Tél : +337 53 46 11 15</p>
+                    <p>&copy; 2024 Sageah ingénierie | Tous droits réservés | <a href="http://sageah.com">Politique de confidentialité</a></p>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@SAGEAHIngénierie" target="_blank" class="icon brands style2 fa-youtube">
+                        <span class="label">YouTube</span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/98494342/admin/dashboard/" target="_blank" class="icon brands style2 fa-linkedin">
+                        <span class="label">LinkedIn</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61573016973955" target="_blank" class="icon brands style2 fa-facebook-f">
+                        <span class="label">Facebook</span>
+                    </a>
+                    <a href="https://twitter.com/@Sageah_ing" target="_blank" class="icon brands style2 fa-twitter">
+                        <span class="label">Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Slideshow script
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 2500);    
+        }
+
+        function plusDivs(n) {
+            showDivs(myIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {myIndex = 1}
+            if (n < 1) {myIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[myIndex-1].style.display = "block";  
+        }
+        
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('menu').classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('menu');
+            const menuToggle = document.getElementById('menu-toggle');
+            
+            if (menu.classList.contains('active') && 
+                !menu.contains(e.target) && 
+                e.target !== menuToggle && 
+                !menuToggle.contains(e.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
