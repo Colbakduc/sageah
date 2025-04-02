@@ -1,0 +1,107 @@
+/* Corps général */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #88e4e4;
+    color: #333;
+}
+
+/* Section principale */
+.w3-content {
+    max-width: 1800px; /* Limite la largeur */
+    margin: 0 auto; /* Centre le contenu */
+    padding: 5px; /* Ajoute un peu de padding */
+}
+
+/* Titres */
+.section-title {
+    font-size: 2.5rem;
+    color: #0077b6;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.section-title .title-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: #0077b6;
+    margin: 10px auto 0 auto;
+}
+
+/* Images et sections */
+.w3-image-section, .w3-image-section-alt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    position: relative;
+}
+
+.image-fill {
+    width: 100%;
+    height: auto; /* Ajuste la hauteur automatiquement */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Texte et bouton */
+.w3-text-section, .w3-text-section-alt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.w3-text-section-alt {
+    background-color: #f0f0f0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #023e8a;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.cta-button a {
+    display: inline-block;
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button a:hover {
+    background-color: #005f99;
+}
+
+/* Grille */
+.w3-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1px;
+}
+
+.w3-half {
+    flex: 1;
+    min-height: 700px;
+    padding: 1px; /* Ajoute un peu de padding entre les colonnes */
+}

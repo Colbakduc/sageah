@@ -1,0 +1,172 @@
+/* Section Contact */
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 200px auto;
+    max-width: 1200px;
+}
+
+/* Titre de la section avec soulignement stylisé */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #0077b6;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px; /* Ajuster la largeur du trait selon vos préférences */
+    height: 4px;
+    background: linear-gradient(90deg, #0077b6, #023e8a); /* Couleurs du trait */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Correction spécifique pour le titre "Contactez-nous" */
+.contact-details h2 {
+    font-size: 2rem;
+    color: #023e8a;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.contact-details h2::after {
+    content: '';
+    display: block;
+    width: 50%; /* Laisser le trait sous le texte */
+    height: 4px;
+    background: linear-gradient(90deg, #0077b6, #023e8a);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+
+/* Formulaire de contact */
+.contact-details {
+    margin-bottom: 40px;
+    text-align: left;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+    font-size: 2rem;
+    color: #023e8a;
+    margin-bottom: 20px;
+}
+
+/* Champs du formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #0077b6;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.submit-button {
+    background-color: #0077b6;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #005f99;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Carte et coordonnées */
+.contact-map {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.map-title {
+    font-size: 2rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.map-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #0077b6, #023e8a);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Carte */
+#map {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Coordonnées sous la carte */
+.contact-info {
+    text-align: center;
+}
+
+.address, .hours {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.address h3, .hours h3 {
+    color: #023e8a;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}

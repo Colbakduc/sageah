@@ -1,0 +1,87 @@
+/* Section Matériels */
+.materials-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header de la section */
+.materials-header .section-title {
+    font-size: 2.5rem;
+    color: #0077b6;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.materials-header .title-icon {
+    font-size: 2.5rem;
+    color: #023e8a;
+}
+
+/* Sous-titres */
+.section-subtitle {
+    font-size: 2rem;
+    color: #023e8a;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Grille d'images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Cartes des logiciels et outils */
+.w3-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.w3-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #0077b6;
+}
+
+.w3-container {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.w3-container p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Espacement entre sections */
+.section {
+    margin-bottom: 40px;
+}

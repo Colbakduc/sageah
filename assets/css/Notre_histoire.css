@@ -1,0 +1,120 @@
+:root {
+  --white: #e6ecf1;
+  --black: #000;
+  --primary: #d4a024;
+  --secondary: #616161;
+  --accent: #f39c12;
+  --overlay: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background-color: #f7f9fc;
+  color: var(--black);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.section-title .title-icon {
+  margin-right: 10px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 10px auto 0 auto;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+}
+
+.timeline .swiper-container {
+  height: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline .swiper-wrapper {
+  transition: 0.6s ease;
+}
+
+.timeline .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: brightness(0.7);
+}
+
+.timeline .swiper-slide:hover {
+  filter: brightness(1);
+  transform: scale(1.02);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.timeline .swiper-slide-content {
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  max-width: 350px;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  font-size: 14px;
+  z-index: 2;
+  background-color: var(--overlay);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.timeline .timeline-year {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.timeline .timeline-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: var(--white);
+}
+
+.timeline .timeline-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+/* Swiper Buttons */
+.swiper-button-prev, .swiper-button-next {
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  color: var(--primary);
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}

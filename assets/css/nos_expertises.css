@@ -1,0 +1,142 @@
+:root {
+  --primary: #0d23eb;
+  --secondary: #04065a;
+  --highlight: rgba(211, 38, 38, 0.6);
+  --background: #c0ebf3;
+  --light: #fff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--primary);
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--light);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title .title-icon {
+  margin-right: 10px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: var(--secondary);
+  margin: 10px auto 0;
+}
+
+.expertises-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.indexes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.indexes li {
+  padding: 1rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.indexes li:hover {
+  border-color: var(--highlight);
+  background-color: rgba(211, 38, 38, 0.1);
+}
+
+.tabs {
+  list-style: none;
+  flex: 1;
+  position: relative;
+}
+
+.tab {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: opacity 0.5s ease;
+}
+
+.tab.active {
+  display: flex;
+}
+
+.tab-content {
+  width: 60%;
+}
+
+.tab-content h3 {
+  font-size: 1.8rem;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.tab-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.tab-image {
+  width: 35%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tab-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tab-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .expertises-section {
+    flex-direction: column;
+  }
+
+  .tab {
+    flex-direction: column;
+  }
+
+  .tab-content, .tab-image {
+    width: 100%;
+  }
+
+  .tab-content {
+    margin-bottom: 20px;
+  }
+}

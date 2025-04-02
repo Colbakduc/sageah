@@ -1,0 +1,160 @@
+:root {
+  --color-primary: #da3654;
+  --color-text: #28cfcf;
+  --color-text-2: #3c4856c2;
+}
+
+@font-face {
+  font-family: 'Recoleta';
+  src: url('https://bejamas.io/fonts/recoleta/Recoleta-SemiBold--subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://bejamas.io/fonts/p-vf.woff2') format('woff2');
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html *, html *::after, html *::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font: 100%/1.6 'Poppins', sans-serif;
+  background-color: lightblue;
+  color: #333;
+}
+
+:is(h1, h2) {
+  font-family: 'Recoleta', 'Poppins';
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.container {
+  width: 100%; /* Full width for the container */
+  margin-inline: auto;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.page2 {
+  display: none;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Space between the image and text */
+  padding: 2rem 0; /* Padding top and bottom */
+  max-width: 100%; /* Ensure full width usage */
+}
+
+.content img {
+  width: 50%; /* Increase the width of the image */
+  height: auto;
+}
+
+.text-content {
+  width: 50%; /* Ensure text content matches the image width */
+  text-align: left;
+}
+
+.text-content a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  line-height: 1.6;
+  color: #333;
+}
+
+.page2 a {
+  color: #6a85b6;
+}
+
+/* Section principale */
+.section-title {
+  font-size: 2.5rem; /* Taille du texte */
+  color: #0077b6;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  gap: 1px; /* Espace entre l'icône et le texte */
+}
+
+.title-icon {
+  font-size: 2.5rem; /* Taille de l'icône */
+  margin-right: 10px;
+  color: #023e8a; /* Couleur de l'icône */
+}
+
+/* Conteneur principal pour le titre */
+.section-title-container {
+  text-align: center; /* Centre tout horizontalement */
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Titre principal */
+.section-title {
+  font-size: 2.5rem; /* Taille du texte */
+  color: #0077b6; /* Couleur du texte */
+  display: inline-flex; /* Assure un alignement correct de l'icône et du texte */
+  align-items: center; /* Aligne verticalement l'icône avec le texte */
+  gap: 1px; /* Espace entre l'icône et le texte */
+}
+
+/* Ligne décorative sous le titre */
+.section-title-container::after {
+  content: '';
+  display: block;
+  width: 200px; /* Largeur du trait */
+  height: 4px; /* Épaisseur du trait */
+  background: linear-gradient(90deg, #0077b6, #023e8a); /* Dégradé de couleur */
+  margin: 15px auto 0; /* Espace au-dessus du trait */
+  border-radius: 2px; /* Coins arrondis pour un effet élégant */
+}
+
+/* Icône */
+.title-icon {
+  font-size: 2.5rem; /* Taille de l'icône */
+  color: #023e8a; /* Couleur de l'icône */
+}
